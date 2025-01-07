@@ -1,0 +1,20 @@
+.img-fluid{
+    width: 150px;
+    height: 150px;
+}
+
+.user-card {
+    border: 0px !important; 
+}
+.user-card:hover{
+  background: #e9ffe9;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; 
+}
+
+.btn-width{
+  width: 93px;
+}

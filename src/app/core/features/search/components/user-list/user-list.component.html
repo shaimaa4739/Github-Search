@@ -1,1 +1,37 @@
-<p>user-list works!</p>
+<div *ngIf="isLoading" class="loading-container">
+  <div class="loading-spinner">
+    <div class="spinner-circle"></div>
+    <div class="spinner-circle"></div>
+    <div class="spinner-circle"></div>
+  </div>
+  <h2 class="loading-text">Loading, please wait...</h2>
+</div>
+
+
+<div *ngIf="usersList.length > 0" class="listCard">
+  <div class="mb-3 d-flex align-content-center justify-content-between ">
+    <h5>Users</h5>
+    <button type="button" class="btn-style btn d-flex align-content-center " (click)="sortByName()">Sort by name <mat-icon class="mx-2">sort</mat-icon></button>
+  </div>
+  <div class="row align-content-center justify-content-center  "  >
+    <div class="mb-4 col-xl-3 col-lg-3 col-md-6 col-12 d-flex align-content-center justify-content-center" *ngFor="let user of usersList">
+        <app-user-card  class="user-card" [user]="user" ></app-user-card>
+    </div>
+  </div>
+
+  <mat-paginator [length]="totalCount"
+  [pageSize]="perPage"
+  [pageIndex]="page - 1"
+  (page)="onPageChange($event.pageIndex + 1)">
+</mat-paginator>
+</div>
+
+<div *ngIf="noUsers" class="no-users-container">
+  <div class="no-users-card">
+    <mat-icon class="no-users-icon">error</mat-icon>
+    <h2>No Users Found</h2>
+    <p>We couldn’t find any users matching your search criteria.</p>
+  </div>
+</div>
+
+

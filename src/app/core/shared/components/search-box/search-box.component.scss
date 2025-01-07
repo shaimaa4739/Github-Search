@@ -1,0 +1,17 @@
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .icon-btn{
+    border: 0;
+    background-color: white;
+  }
+
+.input-style{
+  border: 0px ;
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+

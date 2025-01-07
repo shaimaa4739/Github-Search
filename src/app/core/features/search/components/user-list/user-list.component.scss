@@ -1,0 +1,142 @@
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18rem;
+    height: 153px;
+    border: 1px solid rgb(229 229 229) !important;
+    border-radius: 8px; 
+    overflow: hidden; 
+  }
+
+  .listCard{
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: rgb(255 255 255 / 0%) 0px 3px 40px -20px, rgb(229 219 219 / 6%) 0px 19px 45px -30px;
+    width: 75%;
+    margin: auto;
+
+}
+.btn-style{
+  width: fit-content !important;
+  background-color: white;
+  color: #db9000;
+  font-weight: 500;
+  border: 0;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.spinner-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #61e2ac;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.spinner-circle:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.spinner-circle:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6bd4a3;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.no-users-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .no-users-card {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .no-users-icon {
+    color: #adb5bd;
+    margin-bottom: 1rem;
+  }
+  
+  .no-users-card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #495057;
+  }
+  
+  .no-users-card p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+  }
+  
+  .no-users-card button {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

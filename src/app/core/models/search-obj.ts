@@ -1,5 +1,5 @@
 export interface SearchObj {
-    searchText?: string;
+    searchText?: string|null;
     userName?: string;
     sortType?: string;
     page?: string;

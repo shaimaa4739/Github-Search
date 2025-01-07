@@ -1,1 +1,13 @@
-<p>search-box works!</p>
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+    <div class="search-bar">
+      <input 
+        class="input-style"
+        type="text" 
+        formControlName="query" 
+        placeholder="Search by username or email"
+      />
+      <button class="icon-btn" type="submit" [disabled]="searchForm.invalid">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </form>

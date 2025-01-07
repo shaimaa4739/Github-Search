@@ -1,1 +1,50 @@
-<p>user-details works!</p>
+<div *ngIf="userDetails">
+    <div class="conatiner p-5 page-bg h-100 ">
+        <button class="rounded-btn backbtn mb-4" (click)="goBack()">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <div class="mx-auto card-bg row v-100 ">
+            <div class="col-xl-3 col-lg-3  col-md-12 col-sm-12 col-xs-12 px-2 d-flex flex-column align-items-center  justify-content-center">
+                <img [src]="userDetails.avatar_url" class="rounded-img mb-3" alt="...">
+                <h3>{{userDetails.name}}</h3>
+                <span class="text-muted">{{userDetails.login}}</span>
+                <div class="mt-4 ">
+                    <div *ngIf="userDetails.company" class="d-flex align-content-center text-muted  mb-2 ">
+                        <mat-icon class="mx-2">account_balance</mat-icon>
+                        {{userDetails.company}}
+                    </div>
+                    <div *ngIf="userDetails.location" class="d-flex align-content-center text-muted my-2 ">
+                        <mat-icon class="mx-2">location_on</mat-icon>
+                        {{userDetails.location}}
+                    </div>
+                    <div *ngIf="userDetails.html_url" class="d-flex align-content-center text-muted my-2 ">
+                        <mat-icon class="mx-2">link</mat-icon>
+                        {{userDetails.html_url}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-9  col-md-12 col-sm-12 col-xs-12 pt-3">
+                <div class="row align-items-center justify-content-center  h-100"  >
+                    <div class="mb-5 col-xl-6 col-lg-6 col-md-6 col-12 d-flex align-content-center justify-content-center" *ngFor="let repo of userRepos" >
+                        <div class="card position-relative w-100">
+                            <div class="card-body">
+                                <h4>
+                                    {{repo.name}}
+                                </h4>
+                                <span class="text-muted">
+                                    {{repo.description}}
+                                </span>
+                            </div>
+                            <div class="floated-div">
+                                {{repo.visibility}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
