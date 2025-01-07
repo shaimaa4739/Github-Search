@@ -46,6 +46,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 # test cases
 1- Component Creation
   Ensures that the component is instantiated successfully.
+  
   Result: ✅ Passed
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -53,6 +54,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 2- Dispatch Action on Valid Input
   Verifies that the searchUsers action is dispatched when a valid input is provided.
+  
   Result: ✅ Passed
   it('should dispatch searchUsers action on valid input', () => {
     component.searchForm.controls['query'].setValue('valid query');
@@ -62,6 +64,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 3- No Action on Empty Input
   Ensures that the searchUsers action is not dispatched when the input is empty.
+  
   Result: ✅ Passed
   it('should not dispatch searchUsers action on empty input', () => {
     component.searchForm.controls['query'].setValue('');
@@ -71,6 +74,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 4- Disable Search Button for Invalid Input
   Confirms that the search button is disabled when the form is invalid (empty input).
+  
   Result: ✅ Passed
   it('should disable the search button when the form is invalid', () => {
     component.searchForm.controls['query'].setValue('');
@@ -81,6 +85,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 5- Enable Search Button for Valid Input
   Ensures that the search button is enabled when the form is valid (valid input).
+  
   Result: ✅ Passed
   it('should enable the search button when the form is valid', () => {
     component.searchForm.controls['query'].setValue('valid query');
